@@ -1,0 +1,13 @@
+# Verilator build artifacts
+obj_dir/
+
+# Waveform dumps
+*.vcd
+*.fst
+
+# Yosys outputs
+*.json
+*.blif
+
+# OS
+.DS_Store
