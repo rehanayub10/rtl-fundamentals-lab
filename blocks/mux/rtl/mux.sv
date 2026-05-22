@@ -21,5 +21,7 @@ module mux #(
 );
 
     assign out = in[sel];
+    // Below is if you wanted to account for unused values (i.e. 3 inputs, some select values unused)
+    //assign out = (sel < INPUTS) ? in[sel] : '0;
 
 endmodule

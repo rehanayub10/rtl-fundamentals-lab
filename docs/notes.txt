@@ -1,5 +1,6 @@
 Command to run Icarus Verilog
 iverilog -g2012 blocks/mux/rtl/mux.sv blocks/mux/tb/tb_mux.sv -o blocks/mux/sim/mux_sim.vvp
+vvp blocks/mux/sim/mux_sim_param.vvp
 
 Related dependencies installation Command
 sudo apt install verilator yosys gtkwave iverilog
