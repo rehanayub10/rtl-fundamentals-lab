@@ -1,0 +1,14 @@
+Command to run Icarus Verilog
+iverilog -g2012 blocks/mux/rtl/mux.sv blocks/mux/tb/tb_mux.sv -o blocks/mux/sim/mux_sim.vvp
+
+Related dependencies installation Command
+sudo apt install verilator yosys gtkwave iverilog
+
+For WSL
+Repos are by default marked as owned by Windows. When you submit, they're marked as "unsafe".
+Below command fixes it.
+git config --global --add safe.directory /mnt/...
+
+To configure git "credential helper":
+find /mnt/c/Program\ Files/Git -name "git-credential-manager.exe" 2>/dev/null
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
