@@ -42,6 +42,9 @@ module tb_mux_param;
 
         logic [WIDTH-1:0] expected_val;
 
+        $dumpfile("blocks/mux/sim/mux_param.vcd");
+        $dumpvars(0, tb_mux_param);
+
         //Load each input with a unique random value
         foreach(in[i]) in[i] = $urandom();
 

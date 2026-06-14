@@ -20,3 +20,4 @@ verilator --lint-only --sv -Wall blocks/mux/rtl/mux.sv
 
 Run test bench in verilator
 verilator --binary --sv --trace -Wall --top-module tb_mux_param -Mdir blocks/mux/sim/obj_dir blocks/mux/rtl/mux.sv blocks/mux/tb/tb_mux_param.sv
+./blocks/mux/sim/obj_dir/Vtb_mux_param
