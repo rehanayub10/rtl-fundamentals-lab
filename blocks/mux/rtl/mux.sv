@@ -15,7 +15,8 @@ module mux #(
     parameter WIDTH = 8,
     parameter INPUTS = 4
 ) (
-    input logic [WIDTH-1:0] in [INPUTS],
+    //input logic [WIDTH-1:0] in [INPUTS],
+    input logic [INPUTS-1:0][WIDTH-1:0] in, //packed array synthesis to get yosys to work
     input logic [$clog2(INPUTS)-1:0] sel,
     output logic [WIDTH-1:0] out
 );

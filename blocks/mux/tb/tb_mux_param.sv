@@ -2,12 +2,13 @@
 
 module tb_mux_param;
 
-    localparam int WIDTH = 32;
-    localparam int INPUTS = 8;
+    localparam int WIDTH = 8;
+    localparam int INPUTS = 4;
     localparam int SEL_W = $clog2(INPUTS);
 
     //Signal declarations
-    logic [WIDTH-1:0] in [INPUTS];
+    //logic [WIDTH-1:0] in [INPUTS];
+    logic [INPUTS-1:0][WIDTH-1:0] in;
     logic [SEL_W-1:0] sel;
     logic [WIDTH-1:0] out;
 
@@ -46,7 +47,7 @@ module tb_mux_param;
         $dumpvars(0, tb_mux_param);
 
         //Load each input with a unique random value
-        foreach(in[i]) in[i] = $urandom();
+        foreach(in[i]) in[i] = WIDTH'($urandom());
 
         for(int s = 0; s < INPUTS; s++) begin
             //Recall that we aren't using the default 32-bit width; need to cast

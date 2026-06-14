@@ -9,6 +9,8 @@ obj_dir/
 # Yosys outputs
 *.json
 *.blif
+*.log
+*.v
 
 # OS
 .DS_Store
