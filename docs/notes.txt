@@ -13,3 +13,10 @@ git config --global --add safe.directory /mnt/...
 To configure git "credential helper":
 find /mnt/c/Program\ Files/Git -name "git-credential-manager.exe" 2>/dev/null
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+
+
+Run compile/lint check on Verilog code
+verilator --lint-only --sv -Wall blocks/mux/rtl/mux.sv
+
+Run test bench in verilator
+verilator --binary --sv --trace -Wall --top-module tb_mux_param -Mdir blocks/mux/sim/obj_dir blocks/mux/rtl/mux.sv blocks/mux/tb/tb_mux_param.sv

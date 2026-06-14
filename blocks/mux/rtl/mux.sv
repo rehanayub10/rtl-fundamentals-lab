@@ -1,4 +1,4 @@
-
+`timescale 1ns/1ps
 //module mux (
 //    input  logic a,    // Input 0
 //    input  logic b,    // Input 1
@@ -12,16 +12,14 @@
 //endmodule
 
 module mux #(
-    parameter int WIDTH  = 8,
-    parameter int INPUTS = 4
+    parameter WIDTH = 8,
+    parameter INPUTS = 4
 ) (
-    input  logic [WIDTH-1:0]          in  [INPUTS],
-    output logic [WIDTH-1:0]          out,
-    input  logic [$clog2(INPUTS)-1:0] sel
+    input logic [WIDTH-1:0] in [INPUTS],
+    input logic [$clog2(INPUTS)-1:0] sel,
+    output logic [WIDTH-1:0] out
 );
 
     assign out = in[sel];
-    // Below is if you wanted to account for unused values (i.e. 3 inputs, some select values unused)
-    //assign out = (sel < INPUTS) ? in[sel] : '0;
 
 endmodule
