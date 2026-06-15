@@ -5,7 +5,7 @@ Combinational & sequential building blocks in SystemVerilog.
 ## Blocks
 | Block | Type | Status |
 |---|---|---|
-| mux | Combinational | 🔲 |
+| mux | Combinational | ✅ |
 | priority_encoder | Combinational | 🔲 |
 | barrel_shifter | Combinational | 🔲 |
 | cla_adder | Combinational | 🔲 |
