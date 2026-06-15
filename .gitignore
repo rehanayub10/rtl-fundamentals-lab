@@ -4,10 +4,13 @@ obj_dir/
 # Waveform dumps
 *.vcd
 *.fst
+*.vvp
 
 # Yosys outputs
 *.json
 *.blif
+*.log
+*.v
 
 # OS
 .DS_Store

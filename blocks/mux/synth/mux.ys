@@ -1,0 +1,5 @@
+read_verilog -sv blocks/mux/rtl/mux.sv
+chparam -set WIDTH 8
+chparam -set INPUTS 4
+synth -top mux
+write_verilog blocks/mux/synth/mux.v
