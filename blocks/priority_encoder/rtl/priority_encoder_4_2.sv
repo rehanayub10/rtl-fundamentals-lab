@@ -22,5 +22,16 @@ module priority_encoder_4_2 (
             sel = 2'b00;
         end
     end
+
+//    always_comb begin
+//        priority if (in[3])
+//            sel = 2'b11;
+//        else if (in[2])
+//            sel = 2'b10;
+//        else if (in[1])
+//            sel = 2'b01;
+//        else
+//            sel = 2'b00;
+//    end
     
 endmodule
